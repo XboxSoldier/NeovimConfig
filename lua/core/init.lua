@@ -1,14 +1,10 @@
 vim.opt.tabstop = 8
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
-vim.opt.expandtab = true
 vim.opt.clipboard = "unnamedplus"
 
 vim.opt.incsearch = true
-vim.opt.hlsearch = true
 vim.opt.cursorline = true
-vim.opt.autoindent = true
-vim.opt.smartindent = true
 
 vim.opt.guifont = "MonoLisa Commilitia,CommilitiaFont UI SC:h14"
 vim.opt.termguicolors = true
@@ -132,7 +128,8 @@ require("lazy").setup({
   },
   "liuchengxu/vista.vim",
   "j-hui/fidget.nvim",
-  "github/copilot.vim"
+  "github/copilot.vim",
+  "machakann/vim-highlightedyank"
 })
 
 require("core.keymaps")
@@ -143,10 +140,10 @@ require("plugins.cmp")
 require("plugins.statusline")
 require("plugins.copilot")
 
-vim.cmd([[colorscheme tokyonight]])
+vim.cmd([[colorscheme tokyonight-day]])
 
 if vim.g.neovide then
-  vim.g.neovide_transparency = 0.8
+  vim.g.neovide_transparency = 1
   vim.g.transparency = 0.8
   vim.g.neovide_floating_blur = 0.8
   vim.g.neovide_window_blurred = true
