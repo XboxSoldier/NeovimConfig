@@ -140,6 +140,12 @@ require("lazy").setup({
     config = function()
       require("ibl").setup()
     end,
+  },
+  {
+    'm4xshen/autoclose.nvim',
+    config = function()
+      require('autoclose').setup()
+    end
   }
 })
 
