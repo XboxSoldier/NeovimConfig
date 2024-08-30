@@ -1,3 +1,5 @@
-vim.g.copilot.filetypes = {
-  ['*'] = true
+vim.g.copilot = {
+  filetypes = {
+    ['*'] = true
+  }
 }
