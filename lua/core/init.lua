@@ -142,11 +142,12 @@ require("lazy").setup({
     end,
   },
   {
-    'm4xshen/autoclose.nvim',
+    'windwp/nvim-autopairs',
     config = function()
-      require('autoclose').setup()
+      require('nvim-autopairs').setup()
     end
-  }
+  },
+  'mg979/vim-visual-multi',
 })
 
 require("core.keymaps")
@@ -156,6 +157,7 @@ require("plugins.lsp")
 require("plugins.cmp")
 require("plugins.statusline")
 require("plugins.copilot")
+require("plugins.visual-multi")
 
 vim.cmd([[colorscheme tokyonight-day]])
 

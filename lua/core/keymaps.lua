@@ -151,3 +151,28 @@ map(
   "<Plug>(copilot-accept-word)",
   { desc = "copilot accept word" }
 )
+
+map(
+  'n',
+  '<C-h>',
+  '<cmd>tabprevious<CR>',
+  { desc = 'move to previous tab' }
+)
+map(
+  'n',
+  '<C-j>',
+  '<cmd>bnext<CR>',
+  { desc = 'move to next buffer' }
+)
+map(
+  'n',
+  '<C-k>',
+  '<cmd>bprevious<CR>',
+  { desc = 'move to previous buffer' }
+)
+map(
+  'n',
+  '<C-l>',
+  '<cmd>tabnext<CR>',
+  { desc = 'move to next tab' }
+)
