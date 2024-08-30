@@ -7,6 +7,7 @@ vim.opt.incsearch = true
 vim.opt.cursorline = true
 
 vim.opt.guifont = "MonoLisa Commilitia,CommilitiaFont UI SC:h14"
+vim.opt.linespace = 8
 vim.opt.termguicolors = true
 
 vim.opt.ignorecase = true
@@ -129,7 +130,17 @@ require("lazy").setup({
   "liuchengxu/vista.vim",
   "j-hui/fidget.nvim",
   "github/copilot.vim",
-  "machakann/vim-highlightedyank"
+  "machakann/vim-highlightedyank",
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
+    opts = {},
+    config = function()
+      require("ibl").setup()
+    end,
+  }
 })
 
 require("core.keymaps")
