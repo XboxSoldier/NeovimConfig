@@ -18,6 +18,8 @@ vim.g.maplocalleader = "\\"
 
 vim.g.nvim_tree_respect_buf_cwd = 1
 
+vim.g.rust_recommended_style = false
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -118,14 +120,19 @@ require("lazy").setup({
     end,
   },
   {
-    "folke/tokyonight.nvim",
-    style = "day",
-    terminal_colors = true,
-    transparent = true,
-    styles = {
-      sidebars = "transparent",
-      floats = "transparent",
-    },
+    "projekt0n/github-nvim-theme",
+    config = function()
+      require('github-theme').setup({
+        options = {
+          terminal_colors = true,
+          transparent = true,
+          styles = {
+            sidebars = "transparent",
+            floats = "transparent",
+          }
+        }
+      })
+    end
   },
   "liuchengxu/vista.vim",
   "j-hui/fidget.nvim",
@@ -159,7 +166,7 @@ require("plugins.statusline")
 require("plugins.copilot")
 require("plugins.visual-multi")
 
-vim.cmd([[colorscheme tokyonight-day]])
+vim.cmd([[colorscheme github_light]])
 
 if vim.g.neovide then
   vim.g.neovide_transparency = 1
