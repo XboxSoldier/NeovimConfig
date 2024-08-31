@@ -120,18 +120,15 @@ require("lazy").setup({
     end,
   },
   {
-    "projekt0n/github-nvim-theme",
+    "navarasu/onedark.nvim",
+    priority = 1000,
     config = function()
-      require('github-theme').setup({
-        options = {
-          terminal_colors = true,
-          transparent = true,
-          styles = {
-            sidebars = "transparent",
-            floats = "transparent",
-          }
-        }
+      require('onedark').setup({
+        style = 'light',
+        transparent = false,
+        term_colors = true,
       })
+      require('onedark').load()
     end
   },
   "liuchengxu/vista.vim",
@@ -166,7 +163,7 @@ require("plugins.statusline")
 require("plugins.copilot")
 require("plugins.visual-multi")
 
-vim.cmd([[colorscheme github_light]])
+vim.cmd([[colorscheme onedark]])
 
 if vim.g.neovide then
   vim.g.neovide_transparency = 1

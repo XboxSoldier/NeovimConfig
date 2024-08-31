@@ -1,6 +1,6 @@
 require("lualine").setup({
   options = {
-    theme = "github_light",
+    theme = "onedark",
   },
   sections = {
     lualine_c = {
