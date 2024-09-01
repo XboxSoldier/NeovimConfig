@@ -122,13 +122,13 @@ require("lazy").setup({
   {
     "navarasu/onedark.nvim",
     priority = 1000,
+    lazy = false,
     config = function()
       require('onedark').setup({
         style = 'light',
         transparent = false,
         term_colors = true,
       })
-      require('onedark').load()
     end
   },
   "liuchengxu/vista.vim",
@@ -152,6 +152,33 @@ require("lazy").setup({
     end
   },
   'mg979/vim-visual-multi',
+  {
+    "Isrothy/neominimap.nvim",
+    lazy = false,
+    version = "v3.*.*",
+    enabled = true,
+    init = function()
+      vim.opt.wrap = false
+      vim.opt.sidescrolloff = 30
+
+      vim.g.neominimap = {
+        auto_enable = true,
+        click = {
+          enabled = true
+        },
+        git = {
+          enabled = false
+        },
+        search = {
+          enabled = true,
+          mode = "sign"
+        },
+        treesitter = {
+          enabled = false
+        }
+      }
+    end
+  }
 })
 
 require("core.keymaps")
@@ -163,11 +190,11 @@ require("plugins.statusline")
 require("plugins.copilot")
 require("plugins.visual-multi")
 
-vim.cmd([[colorscheme onedark]])
-
 if vim.g.neovide then
   vim.g.neovide_transparency = 1
   vim.g.transparency = 0.8
   vim.g.neovide_floating_blur = 0.8
   vim.g.neovide_window_blurred = true
 end
+
+require('onedark').load()
