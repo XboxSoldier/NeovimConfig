@@ -143,6 +143,11 @@ require("lazy").setup({
     opts = {},
     config = function()
       require("ibl").setup()
+      if vim.g.vscode then
+        require("ibl").overwrite({
+          enabled = false
+        })
+      end
     end,
   },
   {
@@ -195,6 +200,10 @@ if vim.g.neovide then
   vim.g.transparency = 0.8
   vim.g.neovide_floating_blur = 0.8
   vim.g.neovide_window_blurred = true
+end
+
+if vim.g.vscode then
+  
 end
 
 require('onedark').load()
