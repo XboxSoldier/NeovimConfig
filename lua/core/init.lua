@@ -6,7 +6,7 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.incsearch = true
 vim.opt.cursorline = true
 
-vim.opt.guifont = "MonoLisa Commilitia,CommilitiaFont UI SC:h14"
+vim.opt.guifont = "MonoLisa Commilitia,CommilitiaFont UI TC:h14"
 vim.opt.linespace = 8
 vim.opt.termguicolors = true
 
