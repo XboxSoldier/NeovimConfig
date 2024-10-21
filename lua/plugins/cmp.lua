@@ -1,4 +1,3 @@
-require("mason").setup()
 local cmp = require("cmp")
 
 require("luasnip").setup()
