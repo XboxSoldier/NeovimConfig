@@ -3,6 +3,15 @@ require("mason-lspconfig").setup({
   ensure_installed = require("lsp.list").full,
   automatic_installation = true
 })
+require("mason-tool-installer").setup({
+  ensure_installed = require("lsp.list").full,
+  auto_update = true,
+  run_on_start = true,
+  denounce_hours = 24,
+  integrations = {
+    ['mason-lspconfig'] = true,
+  }
+})
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
