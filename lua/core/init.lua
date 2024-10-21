@@ -182,6 +182,7 @@ require("plugins.cmp")
 require("plugins.statusline")
 require("plugins.copilot")
 require("plugins.visual-multi")
+require("plugins.virt-column")
 
 if vim.g.neovide then
   vim.g.neovide_transparency = 1
