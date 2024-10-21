@@ -13,6 +13,8 @@ vim.opt.termguicolors = true
 vim.opt.ignorecase = true
 vim.wo.number = true
 
+vim.opt.colorcolumn = "80"
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
@@ -168,8 +170,7 @@ require("lazy").setup({
         }
       }
     end
-  },
-  "lukas-reineke/virt-column.nvim"
+  }
 })
 
 require("core.keymaps")
@@ -180,7 +181,6 @@ require("plugins.cmp")
 require("plugins.statusline")
 require("plugins.copilot")
 require("plugins.visual-multi")
-require("plugins.virt-column")
 
 if vim.g.neovide then
   vim.g.neovide_transparency = 1
