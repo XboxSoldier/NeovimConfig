@@ -195,4 +195,5 @@ end
 
 require('onedark').load()
 
-vim.api.nvim_set_hl(0, 'ColorColumn', { ctermbg = 0, guibg = '#808080' })
+vim.api.nvim_set_hl(0, 'ColorColumn', { bg = '#808080', ctermbg = 8 })
+vim.api.nvim_command("redraw")
