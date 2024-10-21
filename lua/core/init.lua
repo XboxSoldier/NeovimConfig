@@ -181,7 +181,6 @@ require("plugins.cmp")
 require("plugins.statusline")
 require("plugins.copilot")
 require("plugins.visual-multi")
-require("core.colorline")
 
 if vim.g.neovide then
   vim.g.neovide_transparency = 1
@@ -195,3 +194,5 @@ if vim.g.vscode then
 end
 
 require('onedark').load()
+
+vim.api.nvim_set_hl(0, 'ColorColumn', { ctermbg = 0, guibg = '#808080' })
