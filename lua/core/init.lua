@@ -181,6 +181,7 @@ require("plugins.cmp")
 require("plugins.statusline")
 require("plugins.copilot")
 require("plugins.visual-multi")
+require("core.colorline")
 
 if vim.g.neovide then
   vim.g.neovide_transparency = 1
