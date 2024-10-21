@@ -1,19 +1,12 @@
-require("mason").setup({})
-require("mason-lspconfig").setup()
+require("mason").setup()
+require("mason-lspconfig").setup({
+  ensure_installed = require("lsp.list").full,
+  automatic_installation = true
+})
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-local servers = {
-  "lua_ls",
-  "clangd",
-  "taplo",
-  "pyright",
-  "zk",
-  "jsonls",
-  "html",
-  "eslint",
-  "mesonlsp",
-}
+local servers = require("lsp.list").servers
 
 local on_attach = function(client, bufnr)
   local opts = { noremap = true, silent = true }
@@ -54,6 +47,7 @@ local on_init = function(client)
 end
 
 local lspconfig = require("lspconfig")
+
 for _, lsp in pairs(servers) do
   lspconfig[lsp].setup({
     on_attach = on_attach,
