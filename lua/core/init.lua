@@ -10,8 +10,6 @@ vim.opt.guifont = "MonoLisa Commilitia,CommilitiaFont UI TC:h14"
 vim.opt.linespace = 8
 vim.opt.termguicolors = true
 
-vim.opt.colorcolumn = "80"
-
 vim.opt.ignorecase = true
 vim.wo.number = true
 
