@@ -10,6 +10,8 @@ vim.opt.guifont = "MonoLisa Commilitia,CommilitiaFont UI TC:h14"
 vim.opt.linespace = 8
 vim.opt.termguicolors = true
 
+vim.opt.colorcolumn = "80"
+
 vim.opt.ignorecase = true
 vim.wo.number = true
 
@@ -54,12 +56,8 @@ require("lazy").setup({
     "nvim-tree/nvim-tree.lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
-  {
-    "williamboman/mason-lspconfig.nvim",
-  },
-  {
-    "WhoIsSethDaniel/mason-tool-installer.nvim"
-  },
+  "williamboman/mason-lspconfig.nvim",
+  "WhoIsSethDaniel/mason-tool-installer.nvim",
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
@@ -172,7 +170,8 @@ require("lazy").setup({
         }
       }
     end
-  }
+  },
+  "Bekaboo/deadcolumn.nvim"
 })
 
 require("core.keymaps")
