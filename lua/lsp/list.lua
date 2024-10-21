@@ -47,9 +47,6 @@ local servers = {
   -- MARKDOWN
   "marksman",
 
-  -- Nginx
-  "nginx_language_server",
-
   -- PHP
   "intelephense",
 
