@@ -59,13 +59,10 @@ local servers = {
   -- PYTHON
   "pylsp",
 
-  -- R
-  "r_language_server",
-
   -- RUST; See Below
 
   -- SQL
-  "sqls",
+  "sqlls",
 
   -- TOML
   "taplo",
