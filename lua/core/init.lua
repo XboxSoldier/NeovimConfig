@@ -171,7 +171,7 @@ require("lazy").setup({
       }
     end
   },
-  "Bekaboo/deadcolumn.nvim"
+  "lukas-reineke/virt-column.nvim"
 })
 
 require("core.keymaps")
