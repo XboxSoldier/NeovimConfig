@@ -7,7 +7,7 @@ vim.opt.incsearch = true
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = true
 
-vim.opt.guifont = "MonoLisa Commilitia,CommilitiaFont UI TC:h14"
+vim.opt.guifont = "MonoLisa Commilitia,Sarasa UI TC:h14"
 vim.opt.linespace = 8
 vim.opt.termguicolors = true
 
@@ -196,6 +196,7 @@ end
 
 require('onedark').load()
 
+-- Related to Colorscheme
 vim.api.nvim_set_hl(0, 'CursorLine', { bg = "#f0f0f0", ctermbg = 7 })
 vim.api.nvim_set_hl(0, 'CursorColumn', { bg = "#f0f0f0", ctermbg = 7 })
 vim.api.nvim_set_hl(0, 'ColorColumn', { bg = "#d3d3d3", ctermbg = 8 })
